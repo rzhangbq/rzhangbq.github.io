@@ -90,7 +90,7 @@ Github: <a href=https://github.com/rzhangbq>rzhangbq</a><br/>
 
 ## Skills
 
-- **C/C++**: C++(intermediate), C(elementary); notes: [C++ basic notes](./C++_basic_notes.html), [C++ OOP notes](./C++_OOP_notes.html)
+- **C/C++**: C++(intermediate), C(elementary); notes: [C++ basic notes](https://rzhangbq.github.io/cv/C++_basic_notes.html), [C++ OOP notes](https://rzhangbq.github.io/cv/C++_OOP_notes.html)
 - **Python**: PyTorch(master), NumPy(master), TensorFlow(intermediate), Django(intermediate), Pandas(intermediate)
 - **CAD**: SolidWorks(master)
 - **Documentation**: Markdown(master), LaTeX(master)
