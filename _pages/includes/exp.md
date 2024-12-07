@@ -20,7 +20,7 @@
   - **Inspiration**:
     - Using extra information from the overlapping area and the non-overlapping area to guide the segmentation of the whole cell
   - **Publication**: CVPR2023: [DoNet: Deep De-overlapping Network for Microscopy Instance Segmentation](https://openaccess.thecvf.com/content/CVPR2023/papers/Jiang_DoNet_Deep_De-Overlapping_Network_for_Cytology_Instance_Segmentation_CVPR_2023_paper)
-- 2021.06 - 2021.09, **Digitalization of wet lab project** (Student helper, [WeShare Tech Limited](https://www.wesharetechnology.com))
+- *2021.06 - 2021.09*, **Digitalization of wet lab project** (Student helper, [WeShare Tech Limited](https://www.wesharetechnology.com))
   - Implementing the hazard warning feature with pop-up windows
   - **Role**:
     - Front-end development with Vue.js
