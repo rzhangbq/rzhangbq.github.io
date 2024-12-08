@@ -4,7 +4,7 @@
 <div class='paper-box-text' markdown="1">
 
 **DoNet: Deep De-Overlapping Network for Cytology Instance Segmentation**
-Hao Jiang*, **ZHANG Rushan***, Yanning Zhou, Yumeng Wang, Hao Chen
+Hao Jiang*, **Rushan Zhang***, Yanning Zhou, Yumeng Wang, Hao Chen
 
 [**Google Scholar**](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=72yDElgAAAAJ&citation_for_view=72yDElgAAAAJ:u5HHmVD_uO8C&inst=7707536466893209563) |
 [**Paper**](https://openaccess.thecvf.com/content/CVPR2023/papers/Jiang_DoNet_Deep_De-Overlapping_Network_for_Cytology_Instance_Segmentation_CVPR_2023_paper.pdf) |
