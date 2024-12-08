@@ -3,7 +3,7 @@
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2023</div><img src='images/donet_2023.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-**DoNet: Deep De-Overlapping Network for Cytology Instance Segmentation**
+**DoNet: Deep De-Overlapping Network for Cytology Instance Segmentation**\
 Hao Jiang*, **Rushan Zhang***, Yanning Zhou, Yumeng Wang, Hao Chen
 
 [**Google Scholar**](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=72yDElgAAAAJ&citation_for_view=72yDElgAAAAJ:u5HHmVD_uO8C&inst=7707536466893209563) |
