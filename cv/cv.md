@@ -6,6 +6,14 @@
 
   gtag('config', 'G-K2PPY8ML6V');
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K2PPY8ML6V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K2PPY8ML6V');
+</script>
 
 <style>
 .divleft{ float:left;}
@@ -24,7 +32,7 @@ Github: <a href=https://github.com/rzhangbq>rzhangbq</a><br/>
 <br/>
 <br/>
 <div class="divright" style="text-align: right;">
-<img src="Personal.jpeg" style="width:18%;" />
+<img src="https://rzhangbq.github.io/cv/Personal.jpeg" style="width:18%;" />
 </div>
 <br/>
 <br/>
@@ -37,7 +45,7 @@ Github: <a href=https://github.com/rzhangbq>rzhangbq</a><br/>
 ## Education
 
 - *2024.08 - Present* **The Georgia Institute of Technology (Georgia Tech)**
-  - PhD in Machine Learning
+  - PhD in Computational Science and Engineering, working with [Prof. Qi Tang](https://tangqi.github.io)
 - *2020.09 - 2024.06* **The Hong Kong University of Science and Technology (HKUST)**
   - BEng in Aerospace Engineering and BSc in Computer Science
   - Awardee of the [Academic Achievement Medal](https://registry.hkust.edu.hk/academic-achievement-medal) (about top 1% of the class)
@@ -98,7 +106,6 @@ Github: <a href=https://github.com/rzhangbq>rzhangbq</a><br/>
   - Helping exchange students navigate the HKUST campus
 
 ## Skills
-
 - **C/C++**: C++(intermediate), C(elementary); notes: [C++ basic notes](https://rzhangbq.github.io/cv/C++_basic_notes.html), [C++ OOP notes](https://rzhangbq.github.io/cv/C++_OOP_notes.html)
 - **Python**: PyTorch(master), NumPy(master), TensorFlow(intermediate), Django(intermediate), Pandas(intermediate)
 - **CAD**: SolidWorks(master)
