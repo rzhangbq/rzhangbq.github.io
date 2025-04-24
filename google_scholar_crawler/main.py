@@ -10,6 +10,7 @@ wait_seconds = 600  # 10 minutes
 
 for attempt in range(1, max_attempts + 1):
     try:
+        print(f"Attempt {attempt}:")
         # Setup proxy
         pg = ProxyGenerator()
         pg.FreeProxies()  # Use free rotating proxies
