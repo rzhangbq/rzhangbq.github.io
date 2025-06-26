@@ -1,4 +1,4 @@
-# 📖 Educations
+# 🎓 Educations
 - *2024.08 - Present* **The Georgia Institute of Technology (Georgia Tech)**
   - PhD in Machine Learning
 - *2020.09 - 2024.06* **The Hong Kong University of Science and Technology (HKUST)**

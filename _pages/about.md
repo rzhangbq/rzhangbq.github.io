@@ -24,6 +24,8 @@ redirect_from:
 
 {% include_relative includes/edu.md %}
 
+{% include_relative includes/trainings.md %}
+
 {% include_relative includes/honors.md %}
 
 {% include_relative includes/exp.md %}
