@@ -19,8 +19,8 @@ main:
   - title: "Previous Projects"
     url: "/#-previous-projects"
 
-  - title: "Invited Talks"
-    url: "/#-invited-talks"
+  - title: "Talks"
+    url: "/#-talks"
 
   - title: "Personal CV"
     url: "./cv/cv.html"
