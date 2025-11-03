@@ -15,3 +15,16 @@ Hao Jiang\*, **Rushan Zhang**\*, Yanning Zhou, Yumeng Wang, Hao Chen
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Submitted (LA-UR-25-30797)</div><img src='images/s-mhd2025.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**Structure-Preserving Transfer of Grad-Shafranov Equilibria to Magnetohydrodynamic Solvers**
+
+[**Presentation**](https://mfem.org/pdf/workshop25/15_Zhang_Magnetohydrodynamic_Solvers.pdf) |
+[**Code**](https://github.com/mfem/mfem/tree/tds-load)
+- Magnetohydrodynamic (MHD) solvers used to study dynamic plasmas for magnetic confinement fusion typically rely on initial conditions that describe force balancing, which are provided by an equilibrium solver based on the Grad--Shafranov (GS) equation. Transferring such equilibria from the GS discretization to the MHD discretization often introduces errors that lead to unwanted perturbations to the equilibria on the level of the MHD discretization. In this work, we identify and analyze sources of such errors in the context of finite element methods, with a focus on the force balancing and divergence-free properties of the loaded equilibria. In particular, we reveal three main sources of errors: (1) the improper choice of finite element spaces in the MHD scheme relative to the poloidal flux and toroidal field function spaces in the GS scheme, (2) the misalignment of the meshes from two solvers, and (3) possibly under-resolved strong gradients near the separatrix. With this in mind, we study the impact of different choices of finite element spaces, including those based on compatible finite elements. In addition, we also investigate the impact of mesh misalignment and propose to conduct mesh refinement to resolve the strong gradients near the separatrix. Numerical experiments are conducted to demonstrate equilibria errors arising in the transferred initial conditions. Results show that force balancing is best preserved when structure-preserving finite element spaces are used and when the MHD and GS meshes are both aligned and refined. Given that the poloidal flux is computed in continuous Galerkin spaces, we further demonstrate that projecting the magnetic field into div-conforming spaces is optimal for preserving force balancing, while projection into curl-conforming spaces, although less optimal for force balance, weakly preserves the divergence-free property. %This highlights the need to develop GS solvers capable of directly providing the poloidal flux in discontinuous Galerkin spaces.
+
+
+</div>
+</div>
+
