@@ -15,7 +15,7 @@ Hao Jiang\*, **Rushan Zhang**\*, Yanning Zhou, Yumeng Wang, Hao Chen
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Submitted (LA-UR-25-30797)</div><img src='images/s-mhd2025.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Submitted (LA-UR-25-30797)</div><img src='images/gs-mhd2025.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Structure-Preserving Transfer of Grad-Shafranov Equilibria to Magnetohydrodynamic Solvers**
