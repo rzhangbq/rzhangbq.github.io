@@ -1,0 +1,5 @@
+I am a first-year PhD student at the Georgia Institute of Technology (Georgia Tech). I am working with [Prof. Qi Tang @ Georgia Tech](https://tangqi.github.io) on computational plasma physics. 
+
+During my undergraduate studies, I was fortunate to work with [Prof. Hao Chen @ HKUST](https://cse.hkust.edu.hk/~jhc/) on deep learning-based medical image analysis, and our [work](https://openaccess.thecvf.com/content/CVPR2023/html/Jiang_DoNet_Deep_De-Overlapping_Network_for_Cytology_Instance_Segmentation_CVPR_2023_paper.html) was proudly published at CVPR. I also had the privilege of collaborating with [Prof. Robert Katzschmann @ ETH](https://srl.ethz.ch/the-group/prof-robert-katzschmann.html) on deep learning-based surrogate modeling for transient fluid-structure interaction and with [Prof. Fu Lin @ HKUST](http://linfu.people.ust.hk/) on data-driven airfoil optimization.
+
+My research interest lies in high-performance computing, scientific modeling and simulation, and artificial intelligence for scientific computing.

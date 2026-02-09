@@ -1,0 +1,1100 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2PPY8ML6V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-K2PPY8ML6V');
+    </script>
+
+    <title>C++ basic notes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#2b3f6a;background-color:#eee9dd !important;border:#ddd3bb;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#9ca3b0;font-style:italic}code[class*="language-"] .token.punctuation,pre[class*="language-"] .token.punctuation{color:#9ca3b0}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#c16161}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#c16161}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#ac4343}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#8f932b}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#d08e25}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d08e25}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{background-color:rgba(255,204,0,0.03);color:rgba(106,68,28,0.77)}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#8f932b}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#d08e25}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#8f932b}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#d08e25}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#2b3f6a}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#5e78e1}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex,code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#379566}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}.emoji {
+  height: 0.8em;
+}body{font-size:16px;background-color:#f3f2ee;font-family:"PT Serif",'Times New Roman',Times;color:#1f0909;line-height:1.5em}body ol,body ul{list-style:none}body blockquote,body q{quotes:none}body blockquote:before,body blockquote:after,body q:before,body q:after{content:'';content:none}body table{border-collapse:collapse;border-spacing:0}body h1,body h2,body h3,body h4,body h5,body h6{font-weight:bold}body h1{font-size:1.875em;line-height:1.6em;margin-top:2em}body h2,body h3{font-size:1.3125em;line-height:1.15;margin-top:2.285714em;margin-bottom:1.15em}body h3{font-weight:normal}body h4{font-size:1.125em;margin-top:2.67em}body h5,body h6{font-size:1em}body h1{border-bottom:1px solid;margin-bottom:1.875em;padding-bottom:.8125em}body a{text-decoration:none;color:#065588}body a:hover,body a:active{text-decoration:underline}body p,body blockquote,body .md-fences{margin-bottom:1.5em}body h1,body h2,body h3,body h4,body h5,body h6{margin-bottom:1.5em}body blockquote{font-style:italic;border-left:5px solid;margin-left:2em;padding-left:1em}body ul,body ol{margin:0 0 1.5em 1.5em}body ol li{list-style-type:decimal;list-style-position:outside}body ul li{list-style-type:disc;list-style-position:outside}body li>p{margin-top:0;margin-bottom:0}body .md-meta,body .md-before,body .md-after{color:#999}body table{margin-bottom:1.5em;font-size:1em}body thead th,body tfoot th{padding:.25em .25em .25em .4em;text-transform:uppercase}body th{text-align:left}body td{vertical-align:top;padding:.25em .25em .25em .4em}body code,body .md-fences{color:inherit;background-color:#dadada;padding-left:1ch;padding-right:1ch}body pre code{background-color:inherit}body .md-fences{margin-left:2em;margin-bottom:3em}body .md-fences .CodeMirror.CodeMirror-wrap{top:-0.8em}body pre,body code,body tt{font-size:.875em;line-height:1.714285em}body h1{line-height:1.3em;font-weight:normal;margin-bottom:.5em}body p+ul,body p+ol{margin-top:-1em}body h3+ul,body h4+ul,body h5+ul,body h6+ul,body h3+ol,body h4+ol,body h5+ol,body h6+ol{margin-top:.5em}body li>ul,body li>ol{margin-top:inherit}body h2,body h3{margin-bottom:.75em}body hr{border-top:none;border-right:none;border-bottom:1px solid;border-left:none}body h1{border-color:#c5c5c5}body blockquote{border-color:#bababa;color:#656565;background-color:#e6e4dc}body thead.md-table-edit{background-color:transparent}body thead{background-color:#dadada}body tr:nth-child(even){background:#e8e7e7}body hr{border-color:#c5c5c5}body .task-list{padding-left:1rem}body .task-list-item{list-style-type:none;margin-left:-1.8em}body .task-list-item .task-list-item-checkbox{margin-right:.8em}body .task-list-item input:before{content:'\221A';display:inline-block;width:1.25rem;height:1.5rem;vertical-align:middle;text-align:center;color:#ddd;background-color:#F3F2EE}body .task-list-item input:checked:before,body .task-list-item input[checked]:before{color:inherit}body img{max-width:100%}body kbd{color:#1f0909}
+    @import "/Users/rsz/Library/Application Support/abnerworks.Typora/themes/latex.css";
+
+    </style>
+    
+  </head>
+  <body for="html-export">
+    <div class="mume markdown-preview">
+    <html>
+        <p><a href="https://rzhangbq.github.io/">Home</a></p><head></head><body><div><h1 class="mume-header" id="c-notes-basic">C++ notes - basic</h1>
+
+<p>Written by ZHANG Rushan</p>
+<h2 class="mume-header" id="0-cautions">0. Cautions</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">01.</span> be careful with the <span class="token string">&apos;single quotes&apos;</span> <span class="token operator">and</span> <span class="token string">&quot;double quotes&quot;</span> <span class="token keyword keyword-for">for</span> <span class="token keyword keyword-char">char</span> <span class="token operator">and</span> string<span class="token punctuation">;</span>
+    <span class="token number">02.</span> <span class="token keyword keyword-do">do</span> <span class="token operator">not</span> forget <span class="token string">&quot;break&quot;</span> <span class="token keyword keyword-for">for</span> <span class="token keyword keyword-switch">switch</span>
+    <span class="token number">03.</span> be careful with the <span class="token string">&quot;==&quot;</span> in logics
+    <span class="token number">04.</span> be careful <span class="token operator">not</span> mistakenly use <span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token punctuation">;</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">and</span> <span class="token keyword keyword-while">while</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token number">05.</span> expressions in <span class="token keyword keyword-for">for</span> loop should be seperated with <span class="token punctuation">;</span> <span class="token operator">not</span> <span class="token punctuation">,</span> i<span class="token punctuation">.</span>e<span class="token punctuation">.</span><span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token punctuation">;</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+    <span class="token number">06.</span> be careful with integer devision
+    <span class="token number">07.</span> check <span class="token punctuation">;</span>
+    <span class="token number">08.</span> forgetting to define variable before use
+    <span class="token number">09.</span> forgetting to <span class="token keyword keyword-return">return</span>
+    <span class="token number">10.</span> forgetting to initialize
+    <span class="token number">11.</span> <span class="token keyword keyword-char">char</span><span class="token punctuation">[</span>length <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword keyword-for">for</span> <span class="token function">string</span> <span class="token punctuation">(</span><span class="token keyword keyword-for">for</span> \<span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token number">12.</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token punctuation">[</span><span class="token punctuation">]</span> is a pointer <span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">,</span> <span class="token operator">not</span> <span class="token keyword keyword-int">int</span><span class="token operator">*</span>
+    <span class="token number">13.</span> deleting dynamic array with <span class="token keyword keyword-delete">delete</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> x<span class="token punctuation">;</span>
+    <span class="token number">14.</span> the index of the last element of x<span class="token punctuation">[</span>N<span class="token punctuation">]</span> is x<span class="token punctuation">[</span>N<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token number">15.</span> you cannot pass a <span class="token keyword keyword-const">const</span> array to another function requiring non<span class="token operator">-</span><span class="token keyword keyword-const">const</span> array
+    <span class="token number">16.</span> assigning a string to a <span class="token keyword keyword-char">char</span> array directly<span class="token operator">:</span> x <span class="token operator">=</span> <span class="token string">&quot;abc&quot;</span> is <span class="token operator">not</span> allowed<span class="token punctuation">,</span> <span class="token function">strcpy</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> is needed
+    <span class="token number">17.</span> expected <span class="token string">&apos;;&apos;</span> after <span class="token string">&quot;struct&quot;</span> definition <span class="token operator">and</span> <span class="token string">&quot;enum&quot;</span> definition
+    <span class="token number">18.</span> be careful <span class="token operator">not</span> to pass by reference a <span class="token keyword keyword-nullptr">nullptr</span>
+    <span class="token number">19.</span> the <span class="token string">&quot;*&quot;</span> <span class="token operator">and</span> <span class="token string">&quot;&amp;&quot;</span> goes with the variable<span class="token punctuation">,</span> <span class="token operator">not</span> the data type<span class="token operator">!</span>
+    <span class="token number">20.</span> can only assign ptr to <span class="token keyword keyword-const">const</span> object to ptr to <span class="token keyword keyword-const">const</span> object
+    <span class="token number">21.</span> use <span class="token keyword keyword-const">const</span> reference variable <span class="token keyword keyword-for">for</span> <span class="token string">&quot;struct&quot;</span> as <span class="token keyword keyword-default">default</span>
+    <span class="token number">22.</span> <span class="token string">&quot;struct&quot;</span> will <span class="token operator">not</span> help you initialize automatically
+    <span class="token number">23.</span> always think about recursion
+    <span class="token number">24.</span> forget object_name<span class="token punctuation">.</span> <span class="token keyword keyword-for">for</span> <span class="token string">&quot;struct&quot;</span> <span class="token operator">and</span> <span class="token string">&quot;class&quot;</span>
+    <span class="token number">25.</span> forget <span class="token operator">+</span><span class="token number">1</span> in recursive count
+    <span class="token number">26.</span> recursive<span class="token operator">/</span>iterative<span class="token operator">:</span> <span class="token keyword keyword-try">try</span> to run the first few cases in heart<span class="token operator">!</span>
+    <span class="token number">27.</span> add <span class="token string">&quot;const&quot;</span> whenever possible
+</pre><h2 class="mume-header" id="00-good-programming-practice">00. Good programming practice</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span> always use extra <span class="token string">&quot;()&quot;</span> when in doubt<span class="token punctuation">,</span> <span class="token operator">or</span> to improve readability
+    <span class="token number">2.</span> <span class="token string">&quot;writing loops&quot;</span>
+        <span class="token string">&quot;when writing the loop, consider:&quot;</span>
+            initial situation
+            update <span class="token keyword keyword-for">for</span> the next loop
+            exit the loop at the right point
+        <span class="token string">&quot;try to verify:&quot;</span>
+            The first iteration
+            The second iteration
+            The last iteration
+    <span class="token number">3.u</span>se <span class="token keyword keyword-const">const</span> to replace numbers
+        <span class="token string">&quot;convension: set const value name with all upper cases&quot;</span>
+            <span class="token string">&quot;more readable&quot;</span>
+            <span class="token string">&quot;more easy to update&quot;</span>
+            <span class="token string">&quot;type-checked during compilation&quot;</span>
+        <span class="token number">1.</span> <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> PI <span class="token operator">=</span> <span class="token number">3.14159</span>
+            <span class="token operator">or</span>
+        <span class="token number">2.</span> #define PI <span class="token number">3.14159</span>
+            <span class="token comment">// define is only substituting PI with 3.14159, and it does not have a type</span>
+</pre><h2 class="mume-header" id="01-datatype">01. datatype</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token comment">//datatype: how you store data</span>
+    <span class="token number">1.</span><span class="token string">&quot;integer, character and character strings&quot;</span>
+        <span class="token keyword keyword-int">int</span>     <span class="token comment">//integers</span>
+        <span class="token keyword keyword-char">char</span>    <span class="token comment">//characters</span>
+            <span class="token string">&apos;single quotes&apos;</span>
+            <span class="token comment">//text, letters</span>
+            special characters<span class="token operator">:</span> 
+                <span class="token string">&apos;\t&apos;</span>    <span class="token comment">//tab</span>
+                <span class="token string">&apos;\n&apos;</span>    <span class="token comment">//newling</span>
+                <span class="token string">&apos;\b&apos;</span>    <span class="token comment">//backspace</span>
+                <span class="token string">&apos;\n&apos;</span>    <span class="token comment">//null character</span>
+        string  <span class="token comment">//a sequence of basic char</span>
+            <span class="token string">&quot;double quotes&quot;</span>
+    <span class="token number">2.</span><span class="token string">&quot;float&quot;</span>
+        <span class="token keyword keyword-float">float</span>       single<span class="token operator">-</span>precision decimal numbers
+        <span class="token keyword keyword-double">double</span>      <span class="token keyword keyword-double">double</span><span class="token operator">-</span>precision decimal numbers
+        precision
+            floating<span class="token operator">-</span>point          sign<span class="token operator">-</span>bit <span class="token operator">+</span> mantissa <span class="token operator">+</span> exponent
+            exponent<span class="token operator">+</span>   larger real number
+            mantissa<span class="token operator">+</span>   higher precision
+        IEEE <span class="token number">754</span> floating<span class="token operator">-</span>point standard<span class="token operator">:</span>
+            <span class="token number">1</span> sign<span class="token operator">-</span>bit <span class="token operator">+</span> <span class="token number">23</span> <span class="token punctuation">(</span><span class="token number">52</span><span class="token punctuation">)</span> mantissa <span class="token operator">+</span> <span class="token number">8</span> <span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> exponent
+
+        all <span class="token keyword keyword-float">float</span> literals will be seen as <span class="token keyword keyword-double">double</span>
+        to specify a <span class="token keyword keyword-float">float</span><span class="token punctuation">,</span> you need to add an <span class="token string">&quot;f&quot;</span>
+        e<span class="token punctuation">.</span>g<span class="token punctuation">.</span> <span class="token number">1.23f</span>
+    <span class="token number">3.</span><span class="token string">&quot;boolean&quot;</span>
+        every number except <span class="token number">0</span> is <span class="token boolean">true</span>
+        <span class="token number">0</span> is <span class="token boolean">false</span>
+        <span class="token boolean">true</span> <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token boolean">false</span> <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token number">4.</span><span class="token string">&quot;size of datatypes&quot;</span>
+        on <span class="token number">32</span><span class="token operator">-</span>bit machine<span class="token operator">:</span>
+        type        size        range
+        <span class="token keyword keyword-bool">bool</span>        <span class="token number">1</span>           <span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-char">char</span>        <span class="token number">1</span>           <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">128</span><span class="token punctuation">,</span> <span class="token number">127</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-short">short</span>       <span class="token number">2</span>           <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">32768</span><span class="token punctuation">,</span> <span class="token number">32767</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-int">int</span>         <span class="token number">4</span>           <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2147483648</span><span class="token punctuation">,</span> <span class="token number">2147483647</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-long">long</span>        <span class="token number">4</span>           <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2147483648</span><span class="token punctuation">,</span> <span class="token number">2147483647</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-float">float</span>       <span class="token number">4</span>
+        <span class="token keyword keyword-double">double</span>      <span class="token number">8</span>
+        <span class="token comment">// you cannot compare two float values with ==</span>
+        <span class="token comment">// the proper way is to do abs(x - y) &lt; epsilon</span>
+        <span class="token keyword keyword-unsigned">unsigned</span>    <span class="token string">&quot;not negative, get double maximum&quot;</span>
+    <span class="token number">5.</span><span class="token string">&quot;coercion&quot;</span>
+        the automatic conversion of the data type
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token keyword keyword-float">float</span> <span class="token operator">+</span> <span class="token keyword keyword-int">int</span> <span class="token operator">-&gt;</span> <span class="token keyword keyword-float">float</span> <span class="token operator">+</span> <span class="token keyword keyword-float">float</span>
+                <span class="token comment">// float has more information</span>
+            <span class="token keyword keyword-char">char</span> <span class="token operator">-</span> <span class="token keyword keyword-char">char</span> <span class="token operator">-&gt;</span> <span class="token keyword keyword-int">int</span> <span class="token operator">-</span> <span class="token keyword keyword-int">int</span>
+                <span class="token comment">// integral promotion</span>
+                <span class="token comment">// it is converted to int, then converted back to char</span>
+            <span class="token comment">// rules:</span>
+                <span class="token keyword keyword-if">if</span> either is <span class="token keyword keyword-long">long</span> <span class="token keyword keyword-double">double</span><span class="token punctuation">,</span> then it will be converted to <span class="token keyword keyword-long">long</span> <span class="token keyword keyword-double">double</span>
+                <span class="token keyword keyword-if">if</span> either is <span class="token keyword keyword-double">double</span><span class="token punctuation">,</span> then it will be converted to <span class="token keyword keyword-double">double</span>
+                <span class="token keyword keyword-if">if</span> either is <span class="token keyword keyword-float">float</span><span class="token punctuation">,</span> then it will be converted to <span class="token keyword keyword-double">double</span>
+                <span class="token keyword keyword-else">else</span> it will run integral <span class="token function">promotion</span> <span class="token punctuation">(</span><span class="token keyword keyword-for">for</span> the <span class="token keyword keyword-char">char</span> <span class="token keyword keyword-case">case</span><span class="token punctuation">)</span>
+    <span class="token number">6.</span><span class="token string">&quot;manual type casting&quot;</span>
+        <span class="token string">&quot;to change a variable to another type: manual type casting &quot;</span>
+            <span class="token generic-function"><span class="token function">static_cast</span><span class="token generic class-name"><span class="token operator">&lt;</span>data<span class="token operator">-</span>type<span class="token operator">&gt;</span></span></span> <span class="token punctuation">(</span>variable<span class="token operator">/</span>value<span class="token punctuation">)</span>
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+                <span class="token keyword keyword-int">int</span> k <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-float">float</span> x <span class="token operator">=</span> <span class="token generic-function"><span class="token function">static_cast</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword keyword-double">double</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token number">7.</span><span class="token string">&quot;enum&quot;</span>
+        internally<span class="token operator">:</span> integers
+        act like<span class="token operator">:</span> <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span>
+        e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token keyword keyword-enum">enum</span> <span class="token class-name">shapes</span> <span class="token punctuation">{</span> TEXT<span class="token punctuation">,</span> LINE<span class="token punctuation">,</span> RECT<span class="token punctuation">,</span> CIRCLE <span class="token punctuation">}</span><span class="token punctuation">;</span>
+                <span class="token comment">// 0, 1, 2, 3</span>
+            <span class="token keyword keyword-enum">enum</span> <span class="token class-name">bloodtype</span> <span class="token punctuation">{</span> A<span class="token punctuation">,</span> B<span class="token punctuation">,</span> AB <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> O <span class="token punctuation">}</span><span class="token punctuation">;</span> 
+                <span class="token comment">// 0, 1, 10, 11</span>
+</pre><h2 class="mume-header" id="02-identifiers-name-of-functions-variables-and-constant">02. identifiers - name of functions, variables and constant</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;usable characters&quot;</span>
+        numbers
+            <span class="token comment">//The first character cannot be a digit (0&#x2013;9).</span>
+        <span class="token function">letters</span> <span class="token punctuation">(</span>lowercase <span class="token operator">or</span> uppercase<span class="token punctuation">)</span>
+            <span class="token comment">//C++ is case sensitive</span>
+        underscore _
+    <span class="token number">2.</span><span class="token string">&quot;reserver words&quot;</span>
+        you <span class="token keyword keyword-do">do</span> <span class="token operator">not</span> really have to memorise
+        when you use a reserver word<span class="token punctuation">,</span> you will get an error right away
+    <span class="token number">3.</span><span class="token string">&quot;ways_to_separate_words&quot;</span>
+        capitalize  <span class="token string">&quot;TwoSeparatedWords&quot;</span>
+        underscore  <span class="token string">&quot;two_separated_words&quot;</span>
+</pre><h2 class="mume-header" id="03-variables">03. variables</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;principle&quot;</span>
+        named memory location that we can write to<span class="token punctuation">,</span> retrieve from<span class="token punctuation">,</span> <span class="token operator">and</span> manipulate
+    <span class="token number">2.</span><span class="token string">&quot;terminologies&quot;</span>
+        <span class="token string">&quot;definition&quot;</span>
+            allocate memory space <span class="token keyword keyword-for">for</span> a variable
+        <span class="token string">&quot;declaration&quot;</span>
+            declare that a variable <span class="token function">exist</span> <span class="token punctuation">(</span>often in sepearted compilations<span class="token punctuation">)</span>
+        <span class="token string">&quot;initialization&quot;</span>
+            assign the initial value <span class="token keyword keyword-for">for</span> a variable
+        
+        when you <span class="token string">&quot;define&quot;</span> a variable<span class="token operator">:</span>
+            a space is allocated to <span class="token keyword keyword-this">this</span> variable
+        when you <span class="token string">&quot;initialize&quot;</span> a variable<span class="token operator">:</span>
+            a space is allocated <span class="token operator">and</span> the value is set
+        when you pass by value<span class="token operator">:</span>
+            a <span class="token keyword keyword-new">new</span> space is allocated<span class="token punctuation">,</span> with the same value as the previous one
+        when you pass by reference<span class="token operator">:</span>
+            a <span class="token keyword keyword-new">new</span> name is created <span class="token keyword keyword-for">for</span> the same previous memory space
+    
+        <span class="token string">&quot;illegal without initialization&quot;</span>
+            <span class="token keyword keyword-const">const</span> variables
+            reference variable
+            <span class="token keyword keyword-const">const</span> pointer
+        <span class="token string">&quot;pointer to const object okay!&quot;</span>
+        <span class="token string">&quot;default initialized to 0&quot;</span>
+            global variable
+            <span class="token string">&quot;otherwise, without initialization, garbage data!&quot;</span>
+    
+    <span class="token number">3.</span><span class="token string">&quot;lvalue and rvalue&quot;</span>
+        lvalue<span class="token operator">:</span> the location of the variable
+            read <span class="token operator">and</span> write
+        rvalue<span class="token operator">:</span> value in storage
+            read only
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+                <span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token number">6</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+                    <span class="token comment">//incorrect</span>
+                    LHS<span class="token operator">:</span> the value of <span class="token function">expression</span> <span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token number">6</span><span class="token punctuation">)</span> <span class="token comment">//rvalue</span>
+                cout <span class="token operator">&lt;&lt;</span> <span class="token operator">++</span><span class="token operator">++</span><span class="token operator">++</span>x<span class="token punctuation">;</span>
+                    <span class="token comment">//correct, print out x + 3</span>
+                    returns a <span class="token string">&quot;lvalue&quot;</span>
+                    <span class="token string">&quot;similar to rbr&quot;</span>
+                cout <span class="token operator">&lt;&lt;</span> x<span class="token operator">++</span><span class="token operator">++</span><span class="token operator">++</span><span class="token punctuation">;</span>
+                    <span class="token comment">//incorrect</span>
+                    returns an <span class="token string">&quot;rvalue&quot;</span>
+                    <span class="token string">&quot;similar to rbv&quot;</span>
+        reference operation<span class="token operator">:</span>
+            <span class="token operator">&amp;</span>x
+            <span class="token comment">//the location of x</span>
+    <span class="token number">4.</span><span class="token string">&quot;constants&quot;</span>
+        literal constants
+            <span class="token keyword keyword-char">char</span> constants<span class="token operator">:</span>  <span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;5&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;\n&apos;</span>
+            string constants<span class="token operator">:</span>  <span class="token string">&quot;hello world&quot;</span>
+            <span class="token keyword keyword-int">int</span> constants<span class="token operator">:</span>  <span class="token number">123</span><span class="token punctuation">,</span> <span class="token number">456</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">89</span>
+            <span class="token keyword keyword-double">double</span> constants<span class="token operator">:</span>  <span class="token number">123.456</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2.90E+11</span>
+                <span class="token comment">// all float literals will be seen as double</span>
+        symbolic constants
+            must be initialized when definition
+            cannot be changed
+            in most cases<span class="token punctuation">,</span> no memory is allocated <span class="token keyword keyword-for">for</span> constants
+</pre><h2 class="mume-header" id="04-operators">04. operators</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;arithmetic&quot;</span>
+            Assignment
+        <span class="token operator">+</span>	
+            Addition
+        <span class="token operator">-</span>	
+            Subtraction
+        <span class="token operator">*</span>	
+            Multiplication
+        <span class="token operator">/</span>	
+            Division
+        <span class="token operator">%</span>	
+            Modulus
+            <span class="token string">&quot;strictly speaking, only defined on positive integers&quot;</span>
+                <span class="token string">&quot;a % b = a - (a / b) * b&quot;</span>
+                <span class="token string">&quot;If it is negative, it may be different on different compilers&quot;</span>
+                <span class="token string">&quot;Only used on integers&quot;</span>
+            <span class="token string">&quot;int and float&quot;</span>
+                <span class="token string">&quot;Arithmetic expressions involving only integers use integerarithmetic&quot;</span>
+                <span class="token string">&quot;Arithmetic expressions involving only floating-point numbersuse floating-point arithmetic&quot;</span>
+                <span class="token string">&quot;be careful with integer devision!&quot;</span>
+    <span class="token number">2.</span><span class="token string">&quot;increment operators&quot;</span>
+        x<span class="token operator">++</span> <span class="token string">&quot;post-increment&quot;</span>
+        <span class="token operator">++</span>x <span class="token string">&quot;pre-increment&quot;</span>
+            adding <span class="token number">1</span> to x
+        x<span class="token operator">--</span>
+        <span class="token operator">--</span>x
+            subtracting <span class="token number">1</span> from x
+        <span class="token string">&quot;difference between putting it before or putting it after&quot;</span>
+            <span class="token string">&quot;++x returns the lvalue of the incremented variable&quot;</span>
+            <span class="token string">&quot;x++ returns the rvalue of the original variable&quot;</span>
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> y<span class="token punctuation">;</span>
+            y <span class="token operator">=</span> x<span class="token operator">++</span><span class="token punctuation">;</span>   
+            <span class="token comment">//you get x = 4 and y = 3</span>
+            <span class="token comment">//this is because adding 1 to x happens after assigning x to y</span>
+
+            <span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> y<span class="token punctuation">;</span>
+            y <span class="token operator">=</span> <span class="token operator">++</span>x<span class="token punctuation">;</span>
+            <span class="token comment">//you get x = 4 and y = 4</span>
+            <span class="token comment">//this is because adding 1 to x happens before assigning x to y</span>
+    
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> x<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token comment">//you get 3</span>
+    
+            <span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token operator">++</span>x<span class="token punctuation">;</span>
+            <span class="token comment">//you get 4</span>
+    <span class="token number">3.</span><span class="token string">&quot;shorthand assignment&quot;</span>
+        <span class="token operator">+=</span>
+        <span class="token operator">-=</span>
+        <span class="token operator">*=</span>
+        <span class="token operator">/=</span>
+        <span class="token operator">%=</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token number">4.</span><span class="token string">&quot;relation&quot;</span>
+        <span class="token operator">==</span>
+            Equal to
+        <span class="token operator">!=</span>
+            Not equal to
+        <span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>
+        <span class="token operator">&gt;=</span>
+        <span class="token operator">&lt;=</span>
+        <span class="token string">&quot;the value of =, e.g. x = y, will be the final value of x&quot;</span>
+        <span class="token string">&quot;therefore, statements like x = 3 will always be true, since its value is 3&quot;</span>
+    <span class="token number">5.</span><span class="token string">&quot;logical&quot;</span>
+        <span class="token operator">&amp;&amp;</span>
+            And
+        <span class="token operator">||</span>
+            Or
+        <span class="token operator">!</span>
+            Negation
+        e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token operator">!</span><span class="token punctuation">(</span>a <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">)</span>
+            a <span class="token operator">&lt;=</span> <span class="token number">10</span>
+    	<span class="token string">&quot;0 is regarded as false&quot;</span>
+    <span class="token number">6.</span><span class="token string">&quot;Precedence&quot;</span>
+        <span class="token comment">//left-right</span>
+            <span class="token punctuation">.</span>
+            <span class="token operator">-&gt;</span>
+            a<span class="token operator">++</span>
+            a<span class="token operator">--</span>
+        <span class="token comment">//right-left</span>
+            <span class="token operator">*</span>a <span class="token comment">//dereferencing operator</span>
+            <span class="token operator">!</span> <span class="token comment">//logical not</span>
+            <span class="token operator">-</span>a   <span class="token comment">//minus</span>
+            <span class="token operator">++</span>a
+            <span class="token operator">--</span>a
+        <span class="token comment">//left-right</span>
+            <span class="token operator">*</span>
+            <span class="token operator">/</span>
+            <span class="token operator">%</span>
+        <span class="token comment">//left-right</span>
+            <span class="token operator">+</span>
+            <span class="token operator">-</span>
+        <span class="token comment">//left-right</span>
+            <span class="token operator">&gt;</span> <span class="token operator">&lt;</span> <span class="token operator">&gt;=</span> <span class="token operator">&lt;=</span>
+        <span class="token comment">//left-right</span>
+            <span class="token operator">==</span> <span class="token operator">!=</span>
+        <span class="token comment">//left-right</span>
+            <span class="token operator">&amp;&amp;</span>  <span class="token comment">//and</span>
+        <span class="token comment">//left-right</span>
+            <span class="token operator">||</span>  <span class="token comment">//or</span>
+        <span class="token comment">//right-left</span>
+            <span class="token operator">=</span>   <span class="token comment">//assignment</span>
+</pre><h2 class="mume-header" id="05-expression-and-statement">05. expression and statement</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;statement&quot;</span>
+        statement does <span class="token operator">not</span> have a value
+        statement is an expression that ends with a semicolumn <span class="token string">&quot;;&quot;</span>
+    <span class="token number">2.</span><span class="token string">&quot;expression&quot;</span>
+        expression has a value
+    <span class="token number">3.</span><span class="token string">&quot;return values of an expression&quot;</span>
+        x <span class="token operator">=</span> y
+            the <span class="token keyword keyword-final">final</span> value of x
+        x <span class="token operator">==</span> y
+            the <span class="token boolean">true</span> value of the statement
+        
+</pre><h2 class="mume-header" id="06-choices">06. choices</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;if-else&quot;</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token comment">/* condition */</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">/* code */</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token comment">/* condition */</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">/* code */</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-else">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">/* code */</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//if there is only one line, then the braces &quot;{}&quot; are not necessary</span>
+        <span class="token string">&quot;else always belongs to the nearest if&quot;</span>
+
+    <span class="token number">2.</span><span class="token string">&quot;ternary choice&quot;</span>
+        e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+        grade <span class="token operator">=</span> <span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;A&apos;</span>
+        <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;B&apos;</span>
+            <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;C&apos;</span>
+                <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;D&apos;</span><span class="token operator">:</span> <span class="token string">&apos;F&apos;</span>
+                <span class="token punctuation">)</span>
+            <span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token operator">or</span>
+    
+        grade <span class="token operator">=</span> <span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;A&apos;</span>
+                                   <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;B&apos;</span>
+                                                         <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;C&apos;</span>
+                                                                               <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;D&apos;</span> <span class="token operator">:</span> <span class="token string">&apos;F&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+        <span class="token operator">or</span>
+        grade <span class="token operator">=</span> <span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;A&apos;</span><span class="token operator">:</span> <span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;B&apos;</span><span class="token operator">:</span> 
+                <span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;C&apos;</span><span class="token operator">:</span> <span class="token punctuation">(</span>percentile <span class="token operator">&gt;=</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&apos;D&apos;</span> <span class="token operator">:</span> <span class="token string">&apos;F&apos;</span><span class="token punctuation">;</span>
+    <span class="token number">3.</span><span class="token string">&quot;switch&quot;</span>
+        <span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span>expression<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+        <span class="token keyword keyword-case">case</span> <span class="token comment">/* constant-expression */</span><span class="token operator">:</span>
+            <span class="token comment">/* code */</span>
+            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token comment">/* constant-expression */</span><span class="token operator">:</span>
+        <span class="token keyword keyword-case">case</span> <span class="token comment">/* constant-expression */</span><span class="token operator">:</span>
+            <span class="token comment">/* code */</span>    
+            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword keyword-default">default</span><span class="token operator">:</span>
+            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token string">&quot;case is the entry point&quot;</span>
+        <span class="token string">&quot;break is the exit point&quot;</span>
+        <span class="token string">&quot;if no break, it will execute till the end of the switch&quot;</span>
+</pre><h2 class="mume-header" id="07-iterations">07. iterations</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;while loop&quot;</span>
+        <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span><span class="token comment">/* condition */</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">/* code */</span>  <span class="token comment">//this can be empty</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token string">&quot;if you do this:&quot;</span>
+            <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">/* code */</span>  <span class="token comment">//this can be empty</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment">// if x &gt; 0, it will get stuck</span>
+    
+        <span class="token string">&quot;you can ask for input using:&quot;</span>
+            <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>cin <span class="token operator">&gt;&gt;</span> x<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">/* code */</span>
+            <span class="token punctuation">}</span>
+    
+        <span class="token string">&quot;when writing the loop, consider:&quot;</span>
+            initial situation
+            update <span class="token keyword keyword-for">for</span> the next loop
+            exit the loop at the right point
+        <span class="token string">&quot;try to verify:&quot;</span>
+            The first iteration
+            The second iteration
+            The last iteration
+    <span class="token number">2.</span><span class="token string">&quot;do-while loop&quot;</span>
+        <span class="token keyword keyword-do">do</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">/* code */</span>
+        <span class="token punctuation">}</span> <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span><span class="token comment">/* condition */</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token number">3.</span><span class="token string">&quot;difference:&quot;</span>
+        <span class="token keyword keyword-while">while</span> will check the condition before entering the loop
+        <span class="token keyword keyword-do">do</span><span class="token operator">-</span><span class="token keyword keyword-while">while</span> will ensure the loop will be executed at least once
+    <span class="token number">4.</span><span class="token string">&quot;for l```op&quot;</span>
+        ## <span class="token keyword keyword-for">for</span>  initialization<span class="token string">&quot;; &quot;</span>exit condition<span class="token string">&quot;; &quot;</span>change of loop variable
+        ```c<span class="token operator">++</span>
+            <span class="token comment">/* code */</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// the &quot;initialization&quot; will be excecuted once before entering the loop</span>
+        sequence<span class="token operator">:</span>
+            <span class="token number">1.</span><span class="token string">&quot;initialization&quot;</span>
+            <span class="token number">2.</span><span class="token string">&quot;exit condition&quot;</span>
+            <span class="token number">3.</span><span class="token comment">/* code */</span>
+            <span class="token number">4.</span><span class="token string">&quot;change of loop variable&quot;</span>
+            <span class="token number">5.</span>back to <span class="token number">2.</span>
+    
+        the <span class="token string">&quot;initialization&quot;</span><span class="token punctuation">;</span> <span class="token string">&quot;exit condition&quot;</span><span class="token punctuation">;</span> <span class="token string">&quot;change of loop variable&quot;</span> can be empty
+            but the semi column <span class="token string">&quot;;&quot;</span> should stay
+    
+        <span class="token string">&quot;you can even have a for loop in one line:&quot;</span>
+            <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> number<span class="token punctuation">;</span> factorial <span class="token operator">*=</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token number">5.</span>
+        <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>      jump out of loop
+        <span class="token keyword keyword-continue">continue</span><span class="token punctuation">;</span>   skip one iteration
+
+</pre><h2 class="mume-header" id="08-function">08. function</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;parameter&quot;</span>
+        <span class="token operator">&lt;</span>formal<span class="token operator">-</span>parameter<span class="token operator">-</span>list<span class="token operator">&gt;</span>
+            <span class="token string">&quot;in function definition&quot;</span>
+            a list of variable <span class="token string">&quot;declarations&quot;</span> separated by commas
+        <span class="token operator">&lt;</span>actual<span class="token operator">-</span>parameter<span class="token operator">-</span>list<span class="token operator">&gt;</span>
+            <span class="token string">&quot;in function call&quot;</span>
+            a list of <span class="token string">&quot;objects&quot;</span> passed to the called function
+    <span class="token number">2.</span><span class="token string">&quot;principles&quot;</span>
+        when you call a function<span class="token operator">:</span>
+            <span class="token number">1.</span> the control flow goes from caller function to the callee function
+            <span class="token number">2.</span> the parameters are passed to the function
+        when to <span class="token keyword keyword-return">return</span> back to the caller<span class="token operator">:</span>
+            <span class="token number">1.</span> when it goes to the end of function
+            <span class="token number">2.</span> <span class="token operator">or</span> when there is a <span class="token keyword keyword-return">return</span>
+                <span class="token comment">// only one value can be returned</span>
+        <span class="token string">&quot;to return more than one thing&quot;</span>
+            <span class="token number">1.</span> <span class="token string">&quot;to return a class&quot;</span>
+            <span class="token number">2.</span> <span class="token string">&quot;use array&quot;</span>
+            <span class="token number">3.</span> <span class="token string">&quot;use Pass By Reference&quot;</span>
+    <span class="token number">3.</span><span class="token string">&quot;passing variables in functions&quot;</span>
+        <span class="token keyword keyword-if">if</span> no variable is needed<span class="token punctuation">,</span> write <span class="token string">&quot;void&quot;</span><span class="token punctuation">,</span> <span class="token operator">or</span> nothing
+        <span class="token keyword keyword-for">for</span> <span class="token keyword keyword-return">return</span> type<span class="token punctuation">,</span> <span class="token keyword keyword-if">if</span> nothing is returned<span class="token punctuation">,</span> write <span class="token string">&quot;void&quot;</span>
+        <span class="token keyword keyword-if">if</span> you want to exit the whole program<span class="token punctuation">,</span> write <span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            to <span class="token keyword keyword-return">return</span> something to the system<span class="token punctuation">,</span> write <span class="token function">exit</span><span class="token punctuation">(</span><span class="token comment">/* the thing you want to return */</span><span class="token punctuation">)</span>
+        <span class="token string">&quot;PBV: pass by value&quot;</span>
+            only the value is allocated to the function variable
+        <span class="token string">&quot;PBR: pass by reference&quot;</span>
+            reference variable<span class="token operator">:</span> a variable with a <span class="token string">&quot;&amp;&quot;</span> symble
+                another name of the previous variable
+            it can refer to an array element
+            <span class="token string">&quot;must be initialized when definition&quot;</span>
+            <span class="token string">&quot;cannot be rebound&quot;</span>
+            more efficient <span class="token keyword keyword-for">for</span> larger variable passing
+            <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> <span class="token operator">&amp;</span>x <span class="token string">&quot;read only PBR&quot;</span>
+                callee function cannot modify the variable
+            <span class="token string">&quot;syntex errors involving PBR&quot;</span>
+                <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> <span class="token operator">&amp;</span>x
+                    <span class="token keyword keyword-const">const</span> variable          &#x221A;
+                    a specific number       &#x221A;
+                    changeable variable     &#x221A;
+                <span class="token keyword keyword-int">int</span> <span class="token operator">&amp;</span>x
+                    <span class="token keyword keyword-const">const</span> variable          &#xD7;
+                    a specific number       &#xD7;
+                    changeable variable     &#x221A;
+        <span class="token string">&quot;RBV: return by value&quot;</span>
+            <span class="token keyword keyword-int">int</span> <span class="token function">function_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token string">&quot;RBR: return by reference&quot;</span>
+            <span class="token keyword keyword-int">int</span><span class="token operator">&amp;</span> <span class="token function">function_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token comment">// the access right is also passed</span>
+            it is <span class="token operator">not</span> allowed to <span class="token keyword keyword-do">do</span> <span class="token keyword keyword-this">this</span><span class="token operator">:</span>
+                <span class="token keyword keyword-int">int</span><span class="token operator">&amp;</span> <span class="token function">find_larger</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> <span class="token operator">&amp;</span>x<span class="token punctuation">,</span> <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> <span class="token operator">&amp;</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            should be<span class="token operator">:</span>
+                <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span><span class="token operator">&amp;</span> <span class="token function">find_larger</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> <span class="token operator">&amp;</span>x<span class="token punctuation">,</span> <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> <span class="token operator">&amp;</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token string">&quot;the use of global variable is not encouraged&quot;</span>
+    <span class="token number">4.</span><span class="token string">&quot;function prototype or interface&quot;</span>
+        <span class="token string">&quot;return type&quot;</span>
+        <span class="token string">&quot;name&quot;</span>
+        <span class="token string">&quot;signature&quot;</span>
+            the input variables <span class="token operator">and</span> its type
+    <span class="token number">5.</span><span class="token string">&quot;declaration and definition&quot;</span>
+        <span class="token string">&quot;declaration&quot;</span>
+            <span class="token string">&quot;writing down the prototype&quot;</span>
+            <span class="token string">&quot;you can only call the functions that is declared before the caller function&quot;</span>
+        <span class="token string">&quot;definition&quot;</span>
+            <span class="token string">&quot;writing down the prototype&quot;</span> <span class="token operator">and</span> <span class="token string">&quot;the body&quot;</span>
+            <span class="token string">&quot;can be defined only once, but declared for many times&quot;</span>
+        <span class="token string">&quot;forward declaration&quot;</span>
+            you can declare all the functions at the very top of your code<span class="token punctuation">,</span>
+                so that you <span class="token keyword keyword-do">do</span> <span class="token operator">not</span> need to check the interference between the functions
+            <span class="token string">&quot;it is also possible to declare inside the caller function&quot;</span>
+    <span class="token number">6.</span><span class="token string">&quot;overloading&quot;</span>
+        only the signature will be considered
+            i<span class="token punctuation">.</span>e<span class="token punctuation">.</span> <span class="token string">&quot;input variables numbers and type&quot;</span>
+        it will compare all the functions already declared<span class="token punctuation">,</span> <span class="token operator">and</span> determine which one to call
+            i<span class="token punctuation">.</span>e<span class="token punctuation">.</span> <span class="token string">&quot;the one that fits most will be called&quot;</span>
+            a<span class="token punctuation">.</span> exact match
+            b<span class="token punctuation">.</span> match after type promotion
+                <span class="token keyword keyword-char">char</span><span class="token operator">/</span><span class="token keyword keyword-bool">bool</span><span class="token operator">/</span><span class="token keyword keyword-short">short</span> <span class="token operator">-&gt;</span> <span class="token keyword keyword-int">int</span> <span class="token operator">-&gt;</span> <span class="token keyword keyword-long">long</span>
+                <span class="token keyword keyword-float">float</span> <span class="token operator">-&gt;</span> <span class="token keyword keyword-double">double</span>
+            c<span class="token punctuation">.</span> match after standard type conversion
+                integral <span class="token operator">&lt;</span><span class="token operator">-&gt;</span> floating
+    <span class="token number">7.</span><span class="token string">&quot;default arguments&quot;</span>
+        <span class="token string">&quot;all at the end of the formal parameter list&quot;</span>
+        <span class="token string">&quot;can be in function declaration or definition, but not both&quot;</span>
+        e<span class="token punctuation">.</span>g<span class="token punctuation">.</span> <span class="token keyword keyword-void">void</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">,</span> <span class="token keyword keyword-float">float</span><span class="token operator">&amp;</span><span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span> <span class="token operator">=</span> <span class="token string">&apos;M&apos;</span><span class="token punctuation">,</span> <span class="token keyword keyword-bool">bool</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><h2 class="mume-header" id="09-array">09. array</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;general rules&quot;</span>
+        <span class="token string">&quot;should be of the same type&quot;</span>
+        cannot be reference variable
+        can be pointers
+        the size of array must be set with a constant value
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span> <span class="token comment">// you cannot do this, but some compiler allow this:</span>
+                <span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-double">double</span> x<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token comment">// even this is not allowed:</span>
+                <span class="token keyword keyword-int">int</span> a<span class="token punctuation">;</span> <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> b<span class="token punctuation">;</span>
+                cin <span class="token operator">&gt;&gt;</span> a<span class="token punctuation">;</span>
+                b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+                <span class="token keyword keyword-double">double</span> x<span class="token punctuation">[</span>b<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        range<span class="token operator">:</span>
+            the size of array cannot be set negative
+            you cannot use negative index
+            you cannot use index out of <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> N<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+                <span class="token comment">// even though this may work, this is just your luck!</span>
+        <span class="token string">&quot;the index of the last element of x[N] is x[N-1]&quot;</span>
+        array definition
+            <span class="token keyword keyword-int">int</span> b<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">;</span>      <span class="token comment">//{1, 2, 0, 0, 0}</span>
+            <span class="token keyword keyword-int">int</span> c<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>          <span class="token comment">//{0, 0, 0, 0, 0}</span>
+            <span class="token keyword keyword-int">int</span> d<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>    <span class="token comment">//{1, 2, 3}</span>
+            <span class="token keyword keyword-int">int</span> c<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>               <span class="token comment">//5 garbage data</span>
+            <span class="token keyword keyword-int">int</span> e<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> c<span class="token punctuation">;</span>           <span class="token operator">not</span> allowed
+            <span class="token string">&quot;once defined, the above syntaxes are no longer allowed:&quot;</span>
+                e <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>          <span class="token operator">not</span> allowed
+                f <span class="token operator">=</span> e<span class="token punctuation">;</span>                  <span class="token operator">not</span> allowed
+            <span class="token string">&quot;you cannot define an array of reference variables:&quot;</span>
+                <span class="token keyword keyword-int">int</span> <span class="token operator">&amp;</span>e<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z<span class="token punctuation">}</span><span class="token punctuation">;</span>  <span class="token operator">not</span> allowed
+            <span class="token string">&quot;you can define a constant array:&quot;</span>
+                <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> x<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span>
+    <span class="token number">2.</span><span class="token string">&quot;how does array work?&quot;</span>
+        all elements are located consecutively
+        the location of the array is calculated
+    <span class="token number">3.</span><span class="token string">&quot;when you pass an array to a function, it is always done by pass by pointer&quot;</span>
+        to avoid an accident change<span class="token operator">:</span>
+        use constant array<span class="token operator">:</span>
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token keyword keyword-int">int</span> <span class="token function">function_name</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> x<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token string">&quot;you cannot pass a const array to another function requiring non-const array&quot;</span>
+    <span class="token number">4.</span><span class="token string">&quot;high-dimensional array&quot;</span>
+        <span class="token string">&quot;to improve readability:&quot;</span>
+            <span class="token keyword keyword-int">int</span> x<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> 
+                <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token string">&quot;when passing a high-dimensional array to a function, the number of column is necessary&quot;</span>
+            <span class="token keyword keyword-int">int</span> <span class="token function">function_name</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> x<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="10-c-string">10. c string</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;initialization&quot;</span>
+        <span class="token keyword keyword-char">char</span> x<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">;</span>    <span class="token comment">//allowed</span>
+        after initialization
+            <span class="token string">&quot;you have to use strcpy to copy a string to another string&quot;</span>
+        when you assign a string to a <span class="token keyword keyword-char">char</span> array
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span> <span class="token keyword keyword-char">char</span> x<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;abc&quot;</span><span class="token punctuation">;</span>
+            the rest of the array will be initialized as <span class="token string">&apos;\0&apos;</span>
+            i<span class="token punctuation">.</span>e<span class="token punctuation">.</span> x<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;b&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;c&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;\0&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;\0&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;\0&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;\0&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;\0&apos;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token number">2.</span><span class="token string">&quot;principles&quot;</span>
+        <span class="token keyword keyword-for">for</span> a string of length N<span class="token punctuation">,</span> there will be another <span class="token keyword keyword-char">char</span> <span class="token string">&apos;\0&apos;</span> as <span class="token function">the</span> <span class="token punctuation">(</span>N <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>th element
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token string">&quot;string&quot;</span> <span class="token operator">==</span> <span class="token punctuation">{</span><span class="token string">&apos;s&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;t&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;r&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;i&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;n&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;g&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;\0&apos;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token string">&quot;Do not forget to prepare an additional space for the &apos;\0&apos;&quot;</span>
+            <span class="token keyword keyword-if">if</span> the <span class="token string">&apos;\0&apos;</span> is forgoten<span class="token punctuation">,</span> it will keep printing out garbage data until it meets <span class="token string">&apos;\0&apos;</span>
+        <span class="token string">&quot;you are not allowed to print out any array except a &quot;</span><span class="token keyword keyword-char">char</span><span class="token string">&quot; array&quot;</span>
+        <span class="token keyword keyword-if">if</span> you have an array of strings
+            it will be a <span class="token number">2</span><span class="token operator">-</span>D array
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span> <span class="token keyword keyword-char">char</span> x<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+                <span class="token string">&quot;str_1&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;str_2&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;str_3&quot;</span>
+            <span class="token punctuation">}</span>
+            you are allowed to write<span class="token operator">:</span>
+                cout <span class="token operator">&lt;&lt;</span> x<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token number">3.</span><span class="token string">&quot;getting input&quot;</span>
+        <span class="token keyword keyword-if">if</span> you get input with 
+            <span class="token keyword keyword-char">char</span> x<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span> cin <span class="token operator">&gt;&gt;</span> x<span class="token punctuation">;</span>
+            <span class="token string">&quot;it will keep getting input until it reaches a white space&quot;</span>
+        to get a sentence with white spaces<span class="token operator">:</span>
+            cin<span class="token punctuation">.</span><span class="token function">getline</span><span class="token punctuation">(</span>char_array<span class="token punctuation">,</span> max_number_of_char<span class="token punctuation">,</span> terminator<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token string">&quot;the terminator will be removed&quot;</span>
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span> cin<span class="token punctuation">.</span><span class="token function">getline</span><span class="token punctuation">(</span>char_array<span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token string">&apos;$&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-this">this</span> will get input <span class="token operator">and</span> store it into str_variable
+                it will stop geting input after pressing <span class="token string">&quot;enter&quot;</span> <span class="token keyword keyword-if">if</span><span class="token operator">:</span>
+                    your input exceeds <span class="token string">&quot;8 - 1 = 7&quot;</span> <span class="token operator">or</span> your input contains $
+                <span class="token keyword keyword-else">else</span><span class="token operator">:</span> it will keep getting input even <span class="token keyword keyword-if">if</span> you pressed <span class="token string">&quot;enter&quot;</span>
+            <span class="token keyword keyword-if">if</span> you <span class="token keyword keyword-do">do</span> <span class="token operator">not</span> specify terminator<span class="token punctuation">,</span> it will be automatically set to <span class="token string">&quot;enter&quot;</span>
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span> cin<span class="token punctuation">.</span><span class="token function">getline</span><span class="token punctuation">(</span>char_array<span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><h2 class="mume-header" id="11-recursive-algorithm">11. recursive algorithm</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    think recursively
+    write recursive function
+        <span class="token number">1.</span> validation
+        <span class="token number">2.</span> base <span class="token function">cases</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>g<span class="token punctuation">.</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token number">3.</span> recursive cases
+    you may call more than one recursive functions
+    <span class="token string">&quot;draw backs compared to iterated solution (e.g. for loop, while loop)&quot;</span>
+        <span class="token number">1.</span> more memory required
+        <span class="token number">2.</span> repeat calculation
+</pre><h2 class="mume-header" id="12-scope">12. scope</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;global scope&quot;</span>
+        <span class="token string">&quot;file scope&quot;</span>
+            outside functions
+        <span class="token string">&quot;global variables&quot;</span>
+            <span class="token string">&quot;when defined, automatically initialized to 0&quot;</span>
+    <span class="token number">2.</span><span class="token string">&quot;local scope&quot;</span>
+        <span class="token string">&quot;function scope&quot;</span>
+            inside functions
+        <span class="token string">&quot;block scope&quot;</span>
+            inside structures
+                e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+                    <span class="token keyword keyword-for">for</span>
+                    <span class="token keyword keyword-while">while</span>
+                    <span class="token keyword keyword-if">if</span>
+    <span class="token number">3.</span><span class="token string">&quot;general rule&quot;</span>
+        <span class="token string">&quot;all variable exists only after it is defined,&quot;</span>
+        <span class="token string">&quot;and disappears when it reaches the end of its scope&quot;</span>
+        <span class="token string">&quot;all functions also only exists (can be called) after it is declared&quot;</span>
+        the usage of global variable is <span class="token operator">not</span> recommended
+        we can have two identifiers of the different scope
+            <span class="token string">&quot;the inner most is to be called&quot;</span>
+</pre><h2 class="mume-header" id="13-separate-compilation">13. separate compilation</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;basic rules&quot;</span>
+        include libraries again
+        define global <span class="token keyword keyword-const">const</span> variables again
+            <span class="token comment">// in both main.cpp and other_function.cpp</span>
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> MAX_CALLS <span class="token operator">=</span> <span class="token number">40</span><span class="token punctuation">;</span>
+        declare global variables with <span class="token keyword keyword-extern">extern</span> <span class="token comment">// not define</span>
+            <span class="token comment">// this should be defined in main.cpp</span>
+            <span class="token comment">// in other_function.cpp</span>
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token keyword keyword-extern">extern</span> <span class="token keyword keyword-bool">bool</span> debug<span class="token punctuation">;</span>
+        declare external functions with <span class="token keyword keyword-extern">extern</span> <span class="token comment">// not define</span>
+            <span class="token comment">// in both main.cpp and other_function.cpp</span>
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token keyword keyword-extern">extern</span> <span class="token keyword keyword-bool">bool</span> <span class="token function">odd</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token number">2.</span><span class="token string">&quot;header file&quot;</span>
+        basically putting the codes into where it used to be
+        e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+        my_include<span class="token punctuation">.</span>h
+        <span class="token comment">// in both main.cpp and other_function.cpp</span>
+            <span class="token comment">// system or user defined header files</span>
+            <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+            <span class="token keyword keyword-using">using</span> <span class="token keyword keyword-namespace">namespace</span> std<span class="token punctuation">;</span>
+            <span class="token comment">// constants definitions</span>
+            <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span> ONE <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token comment">// external function declaration</span>
+            <span class="token keyword keyword-extern">extern</span> <span class="token keyword keyword-int">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        external_variables_declaration<span class="token punctuation">.</span>h
+        <span class="token comment">// in other_function.cpp</span>
+            <span class="token keyword keyword-extern">extern</span> <span class="token keyword keyword-bool">bool</span> debug<span class="token punctuation">;</span>
+        external_variables_definition<span class="token punctuation">.</span>h
+        <span class="token comment">// in main.cpp</span>
+    <span class="token number">3.</span><span class="token string">&quot;basic model&quot;</span>
+        my_include<span class="token punctuation">.</span>h
+        <span class="token comment">// in both main.cpp and other_function.cpp</span>
+            <span class="token comment">// user defined datatype</span>
+            <span class="token comment">// library (other headerfiles, like iostream)</span>
+            <span class="token comment">// global constant definitions</span>
+            <span class="token comment">// external function definitions</span>
+        external_variable_declaration<span class="token punctuation">.</span>h
+        <span class="token comment">// in other_function.cpp</span>
+            <span class="token comment">// global variable declaration</span>
+        external_variable_definition<span class="token punctuation">.</span>h
+        <span class="token comment">// in main.cpp</span>
+            <span class="token comment">// global variable definition</span>
+</pre><h2 class="mume-header" id="14-structure">14. structure</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token string">&quot;defining a new datatype&quot;</span>
+        <span class="token keyword keyword-struct">struct</span> <span class="token class-name">Point</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-double">double</span> x<span class="token punctuation">;</span>
+            <span class="token keyword keyword-double">double</span> y<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token string">&quot;defining a struct variable&quot;</span>
+        Point a <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">24.5</span><span class="token punctuation">,</span> <span class="token number">123.0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>  <span class="token comment">// can no longer be used after definition</span>
+        Point b<span class="token punctuation">;</span>
+    <span class="token string">&quot;accessing a struct content&quot;</span>
+        p<span class="token punctuation">.</span>x
+        p<span class="token punctuation">.</span>y
+        <span class="token comment">// &lt;struct_variable&gt;.&lt;member_variable&gt;</span>
+    <span class="token string">&quot;memberwise copy&quot;</span>
+        <span class="token comment">// you are allowed to copy two struct directly</span>
+        Point a<span class="token punctuation">,</span> b<span class="token punctuation">;</span>
+        a<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> a<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+        b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+        <span class="token comment">// b.x = 3; b.y = 4;</span>
+        <span class="token string">&quot;even if there is an array in the struct, this is also allowed&quot;</span>
+        <span class="token string">&quot;this copy is a bit-to-bit copy&quot;</span>
+    <span class="token string">&quot;assignment&quot;</span>
+        <span class="token comment">// Separate memberwise assignments </span>
+            b<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">24.5</span><span class="token punctuation">;</span>
+            b<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">123.0</span><span class="token punctuation">;</span>
+            <span class="token string">&quot;for a relatively big struct, you may write a function to do that&quot;</span>
+        <span class="token operator">or</span>
+        <span class="token comment">// memberwise copy</span>
+            b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    <span class="token string">&quot;initialization&quot;</span>
+        e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+        <span class="token keyword keyword-struct">struct</span> <span class="token class-name">Date</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> year<span class="token punctuation">;</span>
+            <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> month<span class="token punctuation">;</span>
+            <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> day<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-enum">enum</span> <span class="token class-name">Dept</span> <span class="token punctuation">{</span> CSE<span class="token punctuation">,</span> ECE<span class="token punctuation">,</span> MATH <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-struct">struct</span> <span class="token class-name">record</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-char">char</span> name<span class="token punctuation">[</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span><span class="token operator">&amp;</span> id<span class="token punctuation">;</span>
+            <span class="token keyword keyword-char">char</span> gender<span class="token punctuation">;</span>
+            Dept dept<span class="token punctuation">;</span>
+            Date entry<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        Student a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;Adam&quot;</span><span class="token punctuation">,</span> <span class="token number">2718</span><span class="token punctuation">,</span> <span class="token string">&apos;M&apos;</span><span class="token punctuation">,</span> CSE<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token number">2017</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+                 <span class="token comment">// {char array, int, char, enum, struct}</span>
+                 <span class="token string">&quot;there is a struct within a struct&quot;</span>
+    <span class="token string">&quot;function passing&quot;</span>
+        <span class="token comment">// it is wise to pass a struct by reference</span>
+        <span class="token comment">// to avoid accident modification, set it to const </span>
+    <span class="token string">&quot;always ask youself: what is the data type? what is the rule for this type?&quot;</span>
+    <span class="token string">&quot;we can have an array of structures&quot;</span>
+</pre><h2 class="mume-header" id="15-pointer">15. pointer</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;basic syntaxes&quot;</span>
+        <span class="token string">&quot;you need to specify the type of the pointer you are pointing to&quot;</span>
+        e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+        <span class="token string">&quot;int x&quot;</span> <span class="token comment">// = 20</span>
+            <span class="token number">0x7ffeeb6b9836</span> <span class="token comment">// the address of x</span>
+            <span class="token number">0x7ffeeb6b9837</span>
+            <span class="token number">0x7ffeeb6b9838</span>
+            <span class="token number">0x7ffeeb6b9839</span>
+            <span class="token string">&quot;definition: saving the address of x&quot;</span>
+                <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>c <span class="token operator">=</span> <span class="token operator">&amp;</span>x<span class="token punctuation">;</span>
+                <span class="token comment">// the type is strict</span>
+            <span class="token string">&quot;reading the content of that address&quot;</span>
+            <span class="token string">&quot;dereferencing operation&quot;</span> jump back<span class="token operator">!</span>
+                <span class="token operator">*</span>c<span class="token punctuation">;</span> <span class="token comment">// 20</span>
+                <span class="token keyword keyword-this">this</span> is a lvalue<span class="token punctuation">,</span> which can be edited
+
+            <span class="token string">&quot;reading the address&quot;</span>
+                c<span class="token punctuation">;</span>  <span class="token comment">// 0x7ffeeb6b9836</span>
+    <span class="token number">2.</span><span class="token string">&quot;size of pointer&quot;</span>
+        <span class="token string">&quot;the size of address&quot;</span>
+            <span class="token comment">// and therefore all pointers have the same size</span>
+            <span class="token comment">// exact size is system dependent</span>
+    <span class="token number">3.</span><span class="token string">&quot;pointers can point to:&quot;</span>
+        basic types<span class="token operator">:</span> <span class="token keyword keyword-char">char</span> <span class="token keyword keyword-short">short</span> <span class="token keyword keyword-int">int</span> <span class="token keyword keyword-long">long</span> <span class="token keyword keyword-float">float</span> <span class="token keyword keyword-double">double</span> etc<span class="token punctuation">;</span>
+        user defined<span class="token operator">:</span> <span class="token keyword keyword-struct">struct</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">etc</span><span class="token punctuation">;</span>
+        another pointer<span class="token punctuation">;</span>
+        function<span class="token punctuation">;</span>
+    <span class="token number">4.</span><span class="token string">&quot;const&quot;</span>
+        <span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token string">&quot;const pointer&quot;</span><span class="token string">&quot;life long merrage&quot;</span>
+        <span class="token keyword keyword-int">int</span><span class="token operator">*</span> <span class="token keyword keyword-const">const</span> xcp <span class="token operator">=</span> <span class="token operator">&amp;</span>x<span class="token punctuation">;</span>    <span class="token comment">// must initialize when definition</span>
+            <span class="token comment">// during the whole execution, xcp is binded to x;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token operator">*</span>xcp<span class="token punctuation">;</span>       <span class="token comment">// allowed</span>
+            <span class="token operator">*</span>xcp <span class="token operator">=</span> <span class="token number">6</span>            <span class="token comment">// allowed</span>
+            <span class="token comment">// xcp = &amp;y;        wrong!!</span>
+        <span class="token string">&quot;pointer to const object&quot;</span>
+        <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span><span class="token operator">*</span> xp_c <span class="token operator">=</span> <span class="token operator">&amp;</span>x<span class="token punctuation">;</span>   <span class="token comment">// may not initialize when definition</span>
+            <span class="token comment">// xp_c can point to other variables, but cannot change the value of the variables</span>
+            xp_c <span class="token operator">=</span> <span class="token operator">&amp;</span>y<span class="token punctuation">;</span>           <span class="token comment">// allowed</span>
+            <span class="token comment">// *xp_c = 5         wrong!</span>
+            y <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>              <span class="token comment">// allowed</span>
+        <span class="token string">&quot;const pointer to const object&quot;</span>
+        <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span><span class="token operator">*</span> <span class="token keyword keyword-const">const</span> xcp_c <span class="token operator">=</span> <span class="token operator">&amp;</span>x<span class="token punctuation">;</span> <span class="token comment">// must do initialization when defining</span>
+            <span class="token comment">// xcp_c = &amp;y;        wrong!</span>
+            <span class="token comment">// *xcp_c = 5         wrong!</span>
+            x <span class="token operator">=</span> <span class="token number">6</span>               <span class="token comment">// allowed</span>
+            <span class="token operator">*</span>xcp <span class="token operator">=</span> <span class="token number">7</span>            <span class="token comment">// allowed</span>
+        small tip<span class="token operator">:</span>
+            read from right to left
+            <span class="token keyword keyword-int">int</span><span class="token operator">*</span> <span class="token string">&quot;pointer&quot;</span> <span class="token keyword keyword-const">const</span> <span class="token string">&quot;constant&quot;</span> xcp <span class="token operator">=</span> <span class="token operator">&amp;</span>x<span class="token punctuation">;</span>
+            <span class="token keyword keyword-const">const</span> <span class="token string">&quot;to constant object&quot;</span> <span class="token keyword keyword-int">int</span><span class="token operator">*</span> <span class="token string">&quot;pointer&quot;</span> xp_c <span class="token operator">=</span> <span class="token operator">&amp;</span>x<span class="token punctuation">;</span>
+            <span class="token keyword keyword-const">const</span> <span class="token string">&quot;to constant object&quot;</span> <span class="token keyword keyword-int">int</span><span class="token operator">*</span> <span class="token string">&quot;pointer&quot;</span> <span class="token keyword keyword-const">const</span> <span class="token string">&quot;constant&quot;</span> xcp_c <span class="token operator">=</span> <span class="token operator">&amp;</span>x<span class="token punctuation">;</span>
+    <span class="token number">5.</span><span class="token string">&quot;pointer to struct&quot;</span>
+        <span class="token keyword keyword-struct">struct</span> <span class="token class-name">Point</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-double">double</span> x<span class="token punctuation">;</span>
+            <span class="token keyword keyword-double">double</span> y<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        Point a<span class="token punctuation">;</span>    <span class="token comment">// a contains garbage data</span>
+        Point<span class="token operator">*</span> ap <span class="token operator">=</span> <span class="token operator">&amp;</span>a<span class="token punctuation">;</span>
+        <span class="token string">&quot;the dereferencing way:&quot;</span>
+            <span class="token punctuation">(</span><span class="token operator">*</span>ap<span class="token punctuation">)</span><span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">3.5</span><span class="token punctuation">;</span>
+            <span class="token punctuation">(</span><span class="token operator">*</span>ap<span class="token punctuation">)</span><span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">9.7</span><span class="token punctuation">;</span>
+        <span class="token string">&quot;the -&gt; operator:&quot;</span>
+            ap <span class="token operator">-&gt;</span> x <span class="token operator">=</span> <span class="token number">3.5</span><span class="token punctuation">;</span>
+            ap <span class="token operator">-&gt;</span> y <span class="token operator">=</span> <span class="token number">9.7</span><span class="token punctuation">;</span>
+        <span class="token comment">// ap -&gt; x is the same as (*ap).x</span>
+        <span class="token comment">// always ask yourself: what is the data type?</span>
+    <span class="token number">6.</span><span class="token string">&quot;special notice&quot;</span>
+        a<span class="token punctuation">.</span><span class="token string">&quot;on passing by pointer&quot;</span>
+            <span class="token keyword keyword-if">if</span> you have a function header with pointer variable<span class="token punctuation">,</span>
+                you have to send the address to that function
+                e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+                <span class="token keyword keyword-void">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token keyword keyword-int">int</span><span class="token operator">*</span> x<span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    cout <span class="token operator">&lt;&lt;</span> <span class="token operator">*</span>x<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment">// in main:</span>
+                <span class="token function">print</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// sending the address</span>
+        b<span class="token punctuation">.</span><span class="token string">&quot;on array&quot;</span>
+            we can create an array of pointers<span class="token punctuation">,</span> but <span class="token operator">not</span> an array of references
+</pre><h2 class="mume-header" id="16-dynamic-memory-allocation">16. dynamic memory allocation</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;static object and dynamic object&quot;</span>
+        <span class="token string">&quot;static object&quot;</span> <span class="token punctuation">(</span><span class="token keyword keyword-float">float</span> <span class="token keyword keyword-int">int</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+            usually allocated <span class="token function">sequently</span> <span class="token punctuation">(</span>inverse<span class="token punctuation">)</span> in the stack
+            the allocation <span class="token operator">and</span> deallocation is done automatically
+                have a fixed size at definition<span class="token punctuation">;</span>
+                <span class="token keyword keyword-if">if</span> out of scope<span class="token operator">:</span> deallocated
+        <span class="token string">&quot;dynamic object&quot;</span>
+            usually allocated <span class="token function">sequently</span> <span class="token punctuation">(</span>positive<span class="token punctuation">)</span> in the heap
+            memory allocation <span class="token operator">and</span> deallocation at run time
+                always write <span class="token keyword keyword-new">new</span><span class="token punctuation">,</span> <span class="token keyword keyword-delete">delete</span> in a pair
+            <span class="token string">&quot;it will not be deallocated automatically, so it is not restricted by the scope&quot;</span>
+            
+    <span class="token number">2.</span><span class="token string">&quot;operator new&quot;</span>
+        <span class="token string">&quot;find from heap an amount of memory equal to the size of the datatype and return the address&quot;</span>
+        <span class="token keyword keyword-int">int</span><span class="token operator">*</span> ip <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">;</span>
+    <span class="token number">3.</span><span class="token string">&quot;operator delete&quot;</span>
+        <span class="token string">&quot;deallocate the memory space the pointer is pointing to&quot;</span>
+        <span class="token keyword keyword-delete">delete</span> ip<span class="token punctuation">;</span>
+        <span class="token comment">// now ip is a dangling pointer</span>
+        ip <span class="token operator">=</span> <span class="token keyword keyword-nullptr">nullptr</span><span class="token punctuation">;</span>   <span class="token comment">// if a pointer is not pointing to anyone, just set it to null</span>
+        <span class="token string">&quot;*ip now is an unexpected behaviour&quot;</span>
+    <span class="token number">4.</span><span class="token string">&quot;common errors&quot;</span>
+        dangling pointer<span class="token operator">:</span>
+            pointing to a <span class="token keyword keyword-static">static</span> object which is already out of <span class="token function">scope</span>
+            <span class="token punctuation">(</span><span class="token operator">or</span> anything that is deallocated<span class="token punctuation">)</span>
+        memory leak<span class="token operator">:</span>
+            lose access of some memory address
+            a dynamically allocated memory no longer needed is <span class="token operator">not</span> released
+    <span class="token number">5.</span><span class="token string">&quot;pointer as an array&quot;</span>
+    
+        a dynamic array
+            <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>x <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span><span class="token number">1000</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token string">&quot;to delete a dynamic array&quot;</span>
+                <span class="token keyword keyword-delete">delete</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> array_name<span class="token punctuation">;</span>
+                <span class="token string">&quot;don&apos;t forget the [] for arrays (when creating and deleting)&quot;</span>
+    pbr <span class="token operator">=</span> pbv <span class="token operator">+</span> pointer
+</pre><h2 class="mume-header" id="17-linked-list">17. linked list</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;array vs linked list&quot;</span>
+        array
+            advantage
+                efficient<span class="token punctuation">,</span> head to tell<span class="token punctuation">,</span> works well with loops <span class="token operator">and</span> recursion
+            disadvantage
+                size of the array is determined
+        linked list
+            advantage
+                dynamic<span class="token punctuation">,</span> it grows <span class="token operator">and</span> shrinks to any size as you want
+            disadvantage
+                <span class="token keyword keyword-requires">requires</span> additional memory <span class="token keyword keyword-for">for</span> the linking <span class="token string">&quot;pointers&quot;</span>
+                <span class="token operator">not</span> so <span class="token string">&quot;efficient&quot;</span>
+    <span class="token number">2.</span><span class="token string">&quot;typical linked lists&quot;</span>
+        head <span class="token operator">-&gt;</span> value<span class="token punctuation">,</span>pointer_to_next <span class="token operator">-&gt;</span> value<span class="token punctuation">,</span>pointer_to_next <span class="token operator">-&gt;</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token operator">-&gt;</span> value<span class="token punctuation">,</span><span class="token keyword keyword-nullptr">nullptr</span> <span class="token comment">//tail</span>
+        e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token keyword keyword-struct">struct</span> <span class="token class-name">ll_node</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword keyword-int">int</span> data<span class="token punctuation">;</span>          <span class="token comment">// value</span>
+                ll_node<span class="token operator">*</span> next<span class="token punctuation">;</span>  <span class="token comment">// pointer_to_next</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        the <span class="token string">&quot;pointer_to_next&quot;</span> <span class="token keyword keyword-for">for</span> the last node should be <span class="token keyword keyword-nullptr">nullptr</span>
+    <span class="token number">3.</span><span class="token string">&quot;walking ptr&quot;</span>
+        e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span>ll_node<span class="token operator">*</span> p <span class="token operator">=</span> first_p<span class="token punctuation">;</span> p <span class="token operator">!=</span> <span class="token keyword keyword-nullptr">nullptr</span><span class="token punctuation">;</span> p <span class="token operator">=</span> p<span class="token operator">-&gt;</span>next<span class="token punctuation">)</span>
+                cout <span class="token operator">&lt;&lt;</span> p<span class="token operator">-&gt;</span>data<span class="token punctuation">;</span>
+    <span class="token number">4.</span><span class="token string">&quot;basic operations&quot;</span>
+        <span class="token number">0.</span><span class="token keyword keyword-struct">struct</span>
+            <span class="token keyword keyword-struct">struct</span> <span class="token class-name">ll_node</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword keyword-char">char</span> data<span class="token punctuation">;</span>
+                <span class="token keyword keyword-int">int</span><span class="token operator">*</span> next <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> ll_node<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token number">1.</span>create
+        <span class="token number">2.</span>search
+            use travelsal
+            <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span>ll_node<span class="token operator">*</span> p <span class="token operator">=</span> head<span class="token punctuation">;</span> p <span class="token operator">!=</span> <span class="token keyword keyword-nullptr">nullptr</span><span class="token punctuation">;</span> p <span class="token operator">=</span> p<span class="token operator">-&gt;</span>next<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">/* code */</span>
+            <span class="token punctuation">}</span>
+            
+        <span class="token number">3.</span><span class="token keyword keyword-delete">delete</span>
+            <span class="token string">&quot;for delete, pass by reference (node*&amp; head) is needed&quot;</span>
+            <span class="token string">&quot;because you need to set the pointer variable itself to nullptr&quot;</span>
+            <span class="token string">&quot;duplicate the pointer first&quot;</span>
+        <span class="token number">4.</span>insert
+    <span class="token number">5.</span><span class="token string">&quot;cautions&quot;</span>
+        always think<span class="token operator">:</span> who remembers the address of the next node<span class="token operator">?</span>
+        always think<span class="token operator">:</span> whether a sequence of modifying will lose track of the next node
+            always copy the next pointer first before you modify the last pointer
+            always keep the address of the head node
+        <span class="token string">&quot;special case&quot;</span>
+            <span class="token number">1.</span> at first<span class="token punctuation">,</span> at last
+            <span class="token number">2.</span> empty    <span class="token string">&quot;when it is empty, be careful with head-&gt;next&quot;</span>
+            <span class="token number">3.</span> only one node
+        when <span class="token keyword keyword-using">using</span> pass pointer by reference<span class="token punctuation">,</span> always ask<span class="token operator">:</span> what does it reference to<span class="token operator">?</span>
+</pre><h2 class="mume-header" id="18-array-as-an-pointer">18. array as an pointer</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;pointer arithmetic&quot;</span>
+        pointer_variable <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token string">&quot;pointer_variable_address + 1 * sizeof(type of the variable)&quot;</span>
+        an array name has two role<span class="token operator">:</span>
+            <span class="token number">1.</span>name of array
+            <span class="token number">2.</span><span class="token keyword keyword-const">const</span> pointer pointing to the first element
+        cout <span class="token operator">&lt;&lt;</span> <span class="token operator">&amp;</span>array_name<span class="token punctuation">;</span>    <span class="token comment">//grab addr of the array x, x is the name of the array (role 1)</span>
+        cout <span class="token operator">&lt;&lt;</span> array_name<span class="token punctuation">;</span>     <span class="token comment">//print the const pointer, which is the address of the first element</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token operator">&amp;</span>array_name<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//access the first element, print out its address</span>
+            <span class="token string">&quot;both means the address of the first element&quot;</span>
+        When getting access to the last element of an array<span class="token punctuation">,</span> remember to use start<span class="token operator">+</span>length<span class="token operator">-</span><span class="token number">1</span>
+        
+        <span class="token keyword keyword-if">if</span> you write
+            <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-char">char</span><span class="token operator">*</span> s1 <span class="token operator">=</span> <span class="token string">&quot;creative&quot;</span><span class="token punctuation">;</span>
+                This is okay<span class="token punctuation">.</span>
+            <span class="token keyword keyword-char">char</span><span class="token operator">*</span> s1 <span class="token operator">=</span> <span class="token string">&quot;creative&quot;</span><span class="token punctuation">;</span>
+                Not right<span class="token punctuation">.</span>
+    <span class="token number">2.</span><span class="token string">&quot;dynamic array&quot;</span>
+        <span class="token string">&quot;to create a dynamic array&quot;</span>
+            <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>x <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span><span class="token operator">&lt;</span>integer expression<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// can have a length defined by variable</span>
+        <span class="token string">&quot;to delete a dynamic array&quot;</span>
+            <span class="token keyword keyword-delete">delete</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> array_name<span class="token punctuation">;</span>
+        <span class="token string">&quot;don&apos;t forget the [] for arrays (when creating and deleting)&quot;</span>
+    <span class="token number">3.</span><span class="token string">&quot;multi-dimensional array&quot;</span>
+        To create a <span class="token number">2</span>D array<span class="token operator">:</span>
+            <span class="token number">1.</span> Allocate a <span class="token number">1</span>D array of M <span class="token keyword keyword-int">int</span><span class="token operator">*</span>
+            <span class="token number">2.</span> Allocate a <span class="token number">1</span>D array <span class="token keyword keyword-for">for</span> each of the element
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+            <span class="token comment">// to create</span>
+            <span class="token keyword keyword-int">int</span><span class="token operator">*</span><span class="token operator">*</span> x <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token operator">*</span> <span class="token punctuation">[</span>num_rows<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> num_rows<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                x<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>num_lines<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment">// to get access</span>
+            <span class="token operator">*</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">(</span>x <span class="token operator">+</span> j<span class="token punctuation">)</span> <span class="token operator">+</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">or</span>
+            x<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token comment">// to delete</span>
+            <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> num_rows<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword keyword-delete">delete</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> x<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword keyword-delete">delete</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> x<span class="token punctuation">;</span>  
+        <span class="token string">&quot;When an array is dereferenced, the last element is always deleted first&quot;</span>
+
+</pre><h2 class="mume-header" id="19-class">19. class</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token keyword keyword-class">class</span> <span class="token operator">=</span> data <span class="token operator">+</span> operations <span class="token operator">+</span> access control
+    member functions
+        constructor <span class="token string">&quot;create&quot;</span>    <span class="token comment">// done when defining a class object</span>
+                                <span class="token comment">// either by build-in constructor or user-defined constructor</span>
+        accessor    <span class="token string">&quot;read&quot;</span>      <span class="token comment">// by public functions</span>
+        mutator     <span class="token string">&quot;write&quot;</span>     <span class="token comment">// by public functions</span>
+        destructor  <span class="token string">&quot;delete&quot;</span>
+    object<span class="token operator">:</span> the data<span class="token punctuation">;</span> <span class="token comment">//instantiation //?</span>
+
+    e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+        <span class="token keyword keyword-class">class</span> <span class="token class-name">student_record</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword keyword-private">private</span><span class="token operator">:</span>    <span class="token comment">// access control</span>
+            <span class="token comment">// internal usage</span>
+                <span class="token keyword keyword-char">char</span> gender<span class="token punctuation">;</span>
+                <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> id<span class="token punctuation">;</span>
+                <span class="token keyword keyword-char">char</span> name<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-public">public</span><span class="token operator">:</span>     <span class="token comment">// access control</span>
+                <span class="token comment">// accessor</span>
+                <span class="token keyword keyword-char">char</span> <span class="token function">get_gender</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> gender<span class="token punctuation">;</span> <span class="token punctuation">}</span>    
+                <span class="token string">&quot;&apos;const&apos; is reminding the compiler: double check: do not change data number!&quot;</span>
+                <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> <span class="token function">get_id</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> id<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+                <span class="token keyword keyword-void">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword keyword-const">const</span>
+                    <span class="token punctuation">{</span> cout <span class="token operator">&lt;&lt;</span> name <span class="token operator">&lt;&lt;</span> endl <span class="token operator">&lt;&lt;</span> id <span class="token operator">&lt;&lt;</span> endl <span class="token operator">&lt;&lt;</span> gender <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+                
+                <span class="token comment">// mutator</span>
+                <span class="token keyword keyword-void">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token keyword keyword-char">char</span> my_name<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> my_id<span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span> my_gender<span class="token punctuation">)</span>
+                    <span class="token punctuation">{</span> <span class="token function">strcpy</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> my_name<span class="token punctuation">)</span><span class="token punctuation">;</span> gender <span class="token operator">=</span> my_gender<span class="token punctuation">;</span> id <span class="token operator">=</span> my_id<span class="token punctuation">;</span><span class="token punctuation">}</span>
+                <span class="token keyword keyword-void">void</span> <span class="token function">copy</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> student_record<span class="token operator">&amp;</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token function">set</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>name<span class="token punctuation">,</span> r<span class="token punctuation">.</span>id<span class="token punctuation">,</span> r<span class="token punctuation">.</span>gender<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> 
+                    <span class="token comment">// the data is accessible by their own member functions</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token comment">// calling member function:</span>
+        student_record amy<span class="token punctuation">;</span>
+        amy<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">&quot;Amy&quot;</span><span class="token punctuation">,</span> <span class="token number">20711102</span><span class="token punctuation">,</span> <span class="token string">&apos;F&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+    <span class="token string">&quot;variables in private can only be accessed through functions in public&quot;</span>
+    <span class="token string">&quot;this is to protect the data stored in private area&quot;</span>
+        <span class="token string">&quot;information hiding and protection&quot;</span>
+            stop <span class="token operator">not</span> permitted reading <span class="token operator">and</span> writing
+            protect data from improper modification
+    
+    <span class="token string">&quot;you can just declare functions in class definition&quot;</span>
+        <span class="token string">&quot;and place definition in other places&quot;</span>
+        <span class="token comment">// when defining member functions outside class:</span>
+        student_record<span class="token double-colon punctuation">::</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token keyword keyword-char">char</span> my_name<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> my_id<span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span> my_gender<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">}</span>
+        <span class="token string">&quot;the :: is scope operator, restricting the scope of the function&quot;</span>
+    
+    <span class="token string">&quot;user-defined constructor&quot;</span>
+        class_name<span class="token double-colon punctuation">::</span><span class="token function">class_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+        <span class="token comment">// class_name:: not needed if defined in class definition</span>
+        <span class="token string">&quot;we can use function overload to define default constructor and explicit constructor&quot;</span>
+            e<span class="token punctuation">.</span>g<span class="token punctuation">.</span>
+                temperature<span class="token double-colon punctuation">::</span><span class="token function">temperature</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+                    <span class="token punctuation">{</span> degree <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+                temperature<span class="token double-colon punctuation">::</span><span class="token function">temperature</span><span class="token punctuation">(</span><span class="token keyword keyword-double">double</span> d<span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span> s<span class="token punctuation">)</span> 
+                    <span class="token punctuation">{</span> <span class="token function">set</span><span class="token punctuation">(</span>d<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+                <span class="token comment">// to call explicit constructor:</span>
+                temperature <span class="token function">y</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">&apos;K&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token string">&quot;user-defined destructor&quot;</span>
+        <span class="token class-name">class_name</span><span class="token double-colon punctuation">::</span><span class="token operator">~</span><span class="token function">class_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span> <span class="token keyword keyword-delete">delete</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span>
+        <span class="token string">&quot;we can have at most define one destructor&quot;</span>
+        <span class="token string">&quot;usually used when you use dynamic memory&quot;</span>
+    <span class="token string">&quot;destructor and constructor both do not need data type&quot;</span>
+    
+    constructor function <span class="token operator">and</span> the destructor can only be called automatically<span class="token punctuation">;</span>
+</pre><h2 class="mume-header" id="20-adt">20. ADT</h2>
+
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">    <span class="token number">1.</span><span class="token string">&quot;ADT&quot;</span>
+        abstract data type
+    <span class="token number">2.</span><span class="token string">&quot;stack&quot;</span>
+        <span class="token string">&quot;LIFO&quot;</span> last in first out
+        top<span class="token operator">:</span> getting the value of the top
+        push<span class="token operator">:</span> adding a <span class="token keyword keyword-new">new</span> item
+        pop<span class="token operator">:</span> removing from top
+    <span class="token number">3.</span><span class="token string">&quot;queue&quot;</span>
+        <span class="token string">&quot;FIFO&quot;</span> first in first out
+        front<span class="token operator">:</span> getting the value of the front
+        enqueue<span class="token operator">:</span> add to the back
+        dequeue<span class="token operator">:</span> remove from the front
+</pre></div></body></html>
+    </div>
+  </body>
+</html>
