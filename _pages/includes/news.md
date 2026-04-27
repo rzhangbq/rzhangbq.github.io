@@ -1,4 +1,4 @@
-# 🔥 News
+# <i class="fas fa-fire" aria-hidden="true"></i> News
 - *2026.04* I will be a visiting student at LBNL during the summer.
 - *2025.09* Our latest work, Structure-preserving Transfer of Grad-Shafranov Equilibria to Magnetohydrodynamic Solvers, was presented at MFEM Community Workshop 2025.
 - *2025.04* I has been selected to attend the 13th Argonne Training Program on Extreme-Scale Computing (ATPESC), hosted by Argonne National Laboratory. I was chosen from over 200 applicants to receive full travel support.
