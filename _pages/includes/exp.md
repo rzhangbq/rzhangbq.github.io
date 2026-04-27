@@ -1,4 +1,4 @@
-# 💻 Previous Projects
+# <i class="fas box-archive" aria-hidden="true"></i> Previous Projects
 - *2023.09 - 2024.06* **Designing a high-performance airfoil by advanced CFD and machine-learning methods** ([Prof. Fu Lin@HKUST](https://seng.hkust.edu.hk/about/people/faculty/lin-fu), Final Year Design Project for Aerospace Engineering)
   - Designing, implementing and evaluating machine-learning-based methods for airfoil shape optimization, and comparing results with numerical adjoint methods and experimental results
   - **Inspiration**:

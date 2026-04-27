@@ -1,4 +1,4 @@
-# 📝 Publications 
+# <i class="fas fa-book" aria-hidden="true"></i> Publications 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2023</div><img src='images/donet_2023.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
