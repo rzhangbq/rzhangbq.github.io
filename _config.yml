@@ -6,8 +6,8 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "ZHANG Rushan's Personal Homepage"
-description              : "PhD student at the Georgia Institute of Technology"
+title                    : "Rushan Zhang's Personal Homepage"
+description              : "PhD student\nComputation Science and Engineering\nGeorgia Institute of Technology"
 repository               : "rzhangbq/rzhangbq.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -21,7 +21,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "ZHANG Rushan"
+  name             : "Rushan Zhang"
   avatar           : "images/avatar.jpg"
   bio              :
   location         : "Atlanta, Georgia"
