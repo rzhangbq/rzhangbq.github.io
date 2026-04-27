@@ -1,4 +1,4 @@
-# <i class="fas fa-chalkboard" aria-hidden="true"></i> Talks
+# <i class="fas fa-chalkboard"></i> Talks
 
 - <em id="-talk-mfem2025">2025.09</em> Structure-preserving Transfer of Grad-Shafranov Equilibria to Magnetohydrodynamic Solvers ([Slides](https://mfem.org/pdf/workshop25/15_Zhang_Magnetohydrodynamic_Solvers.pdf))
   - [MFEM Community Workshop 2025](https://mfem.org/workshop/)
