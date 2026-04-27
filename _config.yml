@@ -7,7 +7,10 @@
 
 # Site Settings
 title                    : "Rushan Zhang's Personal Homepage"
-description              : "PhD student\nComputation Science and Engineering\nGeorgia Institute of Technology"
+description              : |-
+  PhD student
+  Computation Science and Engineering
+  Georgia Institute of Technology
 repository               : "rzhangbq/rzhangbq.github.io"
 google_scholar_stats_use_cdn : true
 
