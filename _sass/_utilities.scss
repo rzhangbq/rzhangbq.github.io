@@ -182,9 +182,9 @@ body:hover .visually-hidden button {
 /* social icons*/
 
 .social-icons {
-  .fa {
-    color: #000;
-  }
+  // .fa {
+  //   color: #000;
+  // }
 
   .fa-behance,
   .fa-behance-square {
@@ -208,11 +208,11 @@ body:hover .visually-hidden button {
     color: $foursquare-color;
   }
 
-  .fa-github,
-  .fa-github-alt,
-  .fa-github-square {
-    color: $github-color;
-  }
+  // .fa-github,
+  // .fa-github-alt,
+  // .fa-github-square {
+  //   color: $github-color;
+  // }
 
   .fa-google-plus,
   .fa-google-plus-square {
@@ -228,10 +228,10 @@ body:hover .visually-hidden button {
     color: $lastfm-color;
   }
 
-  .fa-linkedin,
-  .fa-linkedin-square {
-    color: $linkedin-color;
-  }
+  // .fa-linkedin,
+  // .fa-linkedin-square {
+  //   color: $linkedin-color;
+  // }
 
   .fa-pinterest,
   .fa-pinterest-p,
