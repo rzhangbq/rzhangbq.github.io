@@ -1,3 +1,7 @@
+---
+title: "Rushan Zhang's CV"
+---
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2PPY8ML6V"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -31,16 +35,10 @@ Github: <a href=https://github.com/rzhangbq>rzhangbq</a><br/>
 </div>
 <br/>
 <br/>
-<div class="divright" style="text-align: right;">
-<img src="https://rzhangbq.github.io/cv/personal.png" style="width:18%;" />
+<div class="divright" style="text-align: right; width:15%;">
+<img src="https://rzhangbq.github.io/cv/personal.png" style="width:100%;" />
 </div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<div style="clear:left;"></div>
 
 ## Education
 
