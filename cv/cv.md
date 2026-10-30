@@ -45,10 +45,13 @@ Github: <a href=https://github.com/rzhangbq>rzhangbq</a><br/>
 ## Education
 
 - *2024.08 - Present* **The Georgia Institute of Technology (Georgia Tech)**
-  - PhD in Computational Science and Engineering, working with [Prof. Qi Tang](https://tangqi.github.io)
+  - PhD in Computational Science and Engineering
+  - Advisor: [Prof. Qi Tang](https://tangqi.github.io)
+- *2024.08 - 2026.08* **The Georgia Institute of Technology (Georgia Tech)**
+  - MS in Mathematics
 - *2020.09 - 2024.06* **The Hong Kong University of Science and Technology (HKUST)**
   - BEng in Aerospace Engineering and BSc in Computer Science
-  - Awardee of the [Academic Achievement Medal](https://registry.hkust.edu.hk/academic-achievement-medal) (about top 1% of the class)
+  - Awardee of the [Academic Achievement Medal](https://registry.hkust.edu.hk/academic-achievement-medal) (Approx. top 1%)
 - *2022.08 - 2022.12* **The Georgia Institute of Technology (Georgia Tech)**
   - Exchange Student
 
